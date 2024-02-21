@@ -11,12 +11,15 @@
 
 /* Website Text */
 h1 {
-	padding-top: 30px;
 	text-align: center;
 }
 
 .logo {
 	font-family: 'Playfair Display', sans-serif;
+}
+
+.welcome {
+	padding-top: 30px;
 }
 
 body {
