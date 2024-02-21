@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('estimate-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Implement form validation here
+        // Example: Check if all required fields are filled
+    });
+
+document.addEventListener('DOMContentLoaded', function() {
     // Form Validation
     const form = document.querySelector('#contact-form');
     form.addEventListener('submit', function(event) {
