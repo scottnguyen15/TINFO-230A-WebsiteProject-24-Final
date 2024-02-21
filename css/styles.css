@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 
-/* Font Imports */	
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Font Stuff? */
 
@@ -15,13 +17,14 @@ h1 {
 }
 
 .logo {
-	font-family: 'Comic Sans MS', sans-serif;
+	font-family: 'Playfair Display', sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Open Sans', sans-serif;
     /* background-color: #f7f7f7; */
-	background-color: #D6D6D6;
+    background-color: #D6D6D6;
     color: #333;
     line-height: 1.6;
 }
