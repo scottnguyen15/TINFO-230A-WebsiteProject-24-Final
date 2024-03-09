@@ -1,22 +1,44 @@
+function scrollGallery(direction) {
+    const gallery = document.querySelector('.gallery');
+    const scrollAmount = gallery.clientWidth; // Adjust this value for scroll speed
+
+    if (direction === -1) {
+        gallery.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    } else {
+        gallery.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const modal = document.createElement('div');
+    modal.id = 'myModal';
+    modal.classList.add('modal');
+
+    galleryImages.forEach(image => {
+        image.addEventListener('click', function() {
+            const clickedImage = this.cloneNode(true);
+            modal.innerHTML = ''; // Clear previous content
+            modal.appendChild(clickedImage);
+            document.body.appendChild(modal);
+            modal.onclick = function() {
+                modal.remove();
+            };
+        });
+    });
+
     const form = document.getElementById('estimate-form');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         // Implement form validation here
         // Example: Check if all required fields are filled
     });
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Form Validation
-    const form = document.querySelector('#contact-form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        // Validate form fields here
-        // Example: Check if the email field is not empty and has a valid format
-    });
-
-    // Image Slider
-    // You can use libraries like Swiper.js or implement a custom solution
 
     // Smooth Scrolling
     const links = document.querySelectorAll('nav ul li a');
