@@ -5,33 +5,38 @@
     box-sizing: border-box;
 }
 
-/* Website Text */
+/* Typography */
 h1 {
-	text-align: center;
+    text-align: center;
+    margin-bottom: 20px; /* Consolidated margin for all h1 elements */
+    color: #333; /* Set default color */
 }
 
 .logo {
-	font-family: 'Playfair Display', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
 }
 
 body {
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    font-family: 'Open Sans', sans-serif;
-    /* background-color: #f7f7f7; */
+	font-family: 'Open Sans', sans-serif;
     background-color: #D6D6D6;
     color: #333;
     line-height: 1.6;
+	padding-top: 60px;
 }
 
 /* Navigation Bar Styles */
 nav {
     background-color: #333;
+    position: fixed;
     width: 100%;
     color: #ffffff;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: 0; /* Ensure the navigation bar stays at the top */
+    z-index: 1000; /* Ensure the navigation bar stays above other content */
+	border-top: none; /* This gets rid of a gray line above the nav bar. I think.*/
 }
 
 nav .logo {
@@ -73,6 +78,37 @@ nav ul li a:hover {
     color: #CCCCCC;
 }
 
+/* Main Content Styles */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 20px; /* Set default margin for paragraphs */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    padding-top: 40px;
+	font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section h1 {
+    padding-top: 40px;
+	font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 /* Footer Styles */
 footer {
     background-color: #333;
@@ -98,14 +134,35 @@ footer a:hover {
     color: #CCCCCC;
 }
 
+footer div a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: all .1s ease-in-out; 
+    overflow: hidden;
+}
+
+footer div a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer div a:hover {
+    transform: scale(0.9);
+}
+
+footer div a:not(:hover) {
+    transform: scale(1);
+}
+
+/* Form Styles */
 .container1 {
     max-width: 600px;
     margin: 20px auto;
     padding: 0 20px;
-}
-
-h1 {
-    margin-bottom: 20px;
 }
 
 label {
@@ -131,60 +188,7 @@ button:hover {
     background-color: #555;
 }
 
-/* Main Content Styles */
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-	padding-bottom: 5px;
-}
-
-h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-p {
-    margin-bottom: 20px;
-}
-
-/* Section Styles */
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-footer div a {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 0 10px;
-	transition: all .1s ease-in-out; 
-    overflow: hidden;
-}
-
-footer div a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-footer div a:hover {
-    transform: scale(0.9);
-}
-
-footer div a:not(:hover) {
-    transform: scale(1);
-}
-
 /* Column Styles */
-
 .container-col,
 .container-col2 {
     float: left;
