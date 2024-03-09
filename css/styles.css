@@ -36,7 +36,7 @@ nav {
     align-items: center;
     top: 0; /* Ensure the navigation bar stays at the top */
     z-index: 1000; /* Ensure the navigation bar stays above other content */
-	border-top: none; /* This gets rid of a gray line above the nav bar. I think.*/
+    border-top: none; /* This gets rid of a gray line above the nav bar. I think.*/
 }
 
 nav .logo {
